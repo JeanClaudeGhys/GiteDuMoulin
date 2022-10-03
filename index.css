@@ -1,0 +1,69 @@
+/*Jc Ghyselinck  */
+/*Le 03/10/2022*/
+/*Le Gîte du Moulin*/
+/*css attaché à index.html*/
+/*-----------------------------------*/
+@font-face {
+    font-family: Average;
+    src: url('police/AverageSans-Regular.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#main { /*menu-conteneur principal*/
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#main > div:nth-child(1) { /*menu-conteneur du logo*/
+    display: flex;
+    justify-content: center;
+    background-color: #CFD7CF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.boutonMenu { /*menu-div du lien bouton menu (corps du bouton)*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    background-color: #81BD80;
+    width: 20%;
+    height: 60px;    
+}
+
+#main > div a { /*texte bouton*/
+    font-family: Average;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;   
+}
+
+#main > div a:hover { /*texte bouton*/
+    color: white;
+}
+
+#main > div:nth-child(2) { /*conteneur des boutons*/
+    display: flex;
+    justify-content: space-around;
+    background-color: #CFD7CF;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+#photo {
+    transform: scale(1);
+    width: 100%;
+}
+
+
+/*border: solid 2px yellowgreen;*/
+
+
+
