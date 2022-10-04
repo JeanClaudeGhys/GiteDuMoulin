@@ -9,7 +9,7 @@
 }
 
 * {
-    font-family: Average;;
+    font-family: Average;  
 } 
 
 body {
@@ -71,7 +71,7 @@ body {
     font-size: 110px;
     color: #E2FFE1;
     top: 270px;
-    left: 950px;
+    left: 580px;
 }
 
 #text1 { /*Premier paragrhaphe: description générale*/
@@ -116,27 +116,253 @@ body {
     
 }
 
-#reservCar {
+#reservCar { /*Bouton réservation carrousel*/
     width: 300px;
     height: 50px;
     border-radius: 7px;
     background-color: #E1EF87;
     position: relative;
     top: -200px; 
-
 }
 
-#reservCar p {
+#reservCar p { /*Texte du bouton réservation carrousel*/
     font-size: 25px;
     position: relative;
     top: -20px;   
 }
 
+/*Aire du camping car---------------------------------------------*/
+#conteneurArticle1 { /*Conteneur article aire de camping car*/
+    width: 100%;
+    height: 648px;
+    background-color: #CCCCCC;
+    position: relative;
+    top: -54px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#reservCc { /*Bouton réserver aire camping car*/
+    width: 300px;
+    height: 50px;
+    border-radius: 7px;
+    background-color: #E1EF87;
+}
+
+#reservCc p { /*Texte du bouton réserver aire camping car*/ 
+    font-size: 25px;
+    position: relative;
+    top: -20px;
+}
+
+#conteneurAside11, #conteneurAside12 { /*2 sous-conteneurs aire camping car*/
+    width: 50%;
+    font-size: 24px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#conteneurAside12 p { /*Texte Notre aire de camping car*/
+    font-size: 36px;
+} 
+
+#photo2 {
+    position: relative;
+    top: -33px;
+    width: 600px;
+    height: 420px;
+}
+
+/*Notre hostellerie---------------------------------------------*/
+
+#conteneurArticle2 { /*Conteneur article hostellerie*/
+    width: 100%;
+    height: 648px;
+    background-color: #CFD7CF;
+    position: relative;
+    top: -54px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#reservKg { /*Bouton réserver hostellerie*/
+    width: 300px;
+    height: 50px;
+    border-radius: 7px;
+    background-color: #E1EF87;
+}
+
+#reservKg p { /*Texte du bouton réserver hostellerie*/ 
+    font-size: 25px;
+    position: relative;
+    top: -20px;
+}
+
+#conteneurAside21, #conteneurAside22 { /*2 sous-conteneurs hostellerie*/
+    width: 50%;
+    font-size: 24px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#conteneurAside21 p { /*Texte Notre aire de camping car*/
+    font-size: 36px;
+} 
+
+#photo3 {
+    position: relative;
+    top: -33px;
+    width: 600px;
+    height: 420px;
+}
+
+/*A découvrir---------------------------------------------*/
+
+#conteneurArticle3 { /*Conteneur article A découvrir*/
+    width: 100%;
+    height: 648px;
+    background-color: #CCCCCC;
+    position: relative;
+    top: -54px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#conteneurAside31, #conteneurAside32 { /*2 sous-conteneurs A découvrir*/
+    width: 50%;
+    font-size: 24px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#conteneurAside32 p { /*Texte A découvrir*/
+    font-size: 36px;
+} 
+
+#photo4 {
+    position: relative;
+    top: -33px;
+    width: 600px;
+    height: 420px;
+}
 
 
+/*Nos extérieurs---------------------------------------------*/
+
+#conteneurArticle4 { /*Conteneur article Nos extérieurs*/
+    width: 100%;
+    height: 648px;
+    background-color: #CFD7CF;
+    position: relative;
+    top: -54px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#conteneurAside41, #conteneurAside42 { /*2 sous-conteneurs Nos extérieurs*/
+    width: 50%;
+    font-size: 24px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#conteneurAside41 p { /*Texte Nos extérieurs*/
+    font-size: 36px;
+}
+
+#photo5 {
+    position: relative;
+    top: -33px;
+    width: 600px;
+    height: 420px;
+}
 
 
+/*Le footer---------------------------------------------*/
 
+#contfoot { /*Conteneur footer*/
+    background-color: #769976;
+    position: relative;
+    top: -54px;
+    display: flex;
+    justify-content: space-around;
+}
+
+li a { /*Liens mentions*/
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover { /*Liens mentions*/
+    color: white;
+}
+
+.entet { /* Formatage texte Mentions*/
+    font-size: 26px;
+}
+
+#mentions { /*Conteneur mentions*/
+    position: relative;
+    top: -10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#coord > li:first-of-type { /*logo adresse*/
+    list-style: url("/images_logos/panneau.png");
+}
+
+#coord > li:nth-of-type(2) { /*logo téléphone*/
+    list-style: url("/images_logos/tel.png");
+}
+
+#coordonnees {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#resosoc {
+    position: relative;
+    top: -25px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#partenaire {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    background-color: #769976;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    position: relative;
+    top: -54px;
+}
 
 
 
