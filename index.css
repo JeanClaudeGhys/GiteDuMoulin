@@ -8,25 +8,52 @@
     src: url('police/AverageSans-Regular.ttf');
 }
 
-* {
-    font-family: Average;  
-} 
-
-body {
+*, body, html {
+    font-family: Average;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+nav {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0;
+}
+
+#principale {
+    position: relative;
+    top: 241px;
+}
+
+.toppage {
+    position: fixed;
+    opacity: 15%;
+    bottom: 30px;
+    right: 10px;
+    transform: scale(0.5) rotate(-90deg);
+    -webkit-transform: scale(0.5) rotate(-90deg);
+    -moz-transform: scale(0.5) rotate(-90deg);
+    -ms-transform: scale(0.5) rotate(-90deg);
+    -o-transform: scale(0.5) rotate(-90deg);
+    z-index: 1;
+}
+
+.toppage:hover {
+    opacity: 100%;
 }
 
 #main { /*menu-conteneur principal*/
     display: flex;
     flex-direction: column;
-    
 }
 
 #main > div:nth-child(1) { /*menu-conteneur du logo*/
     display: flex;
     justify-content: center;
-    background-color: #CFD7CF;
+    background-color: #93d393;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -35,59 +62,66 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 7px;
-    background-color: #81BD80;
-    width: 20%;
-    height: 60px;    
+    border-radius: 7px; 
+    width: 250px;
+    height: 50px;   
 }
 
 #main > div a { /*texte bouton*/
-    font-size: 20px;
+    font-size: 22px;
     color: black;
     font-weight: bold;
-    text-decoration: none;   
+    text-decoration: none;
+    text-decoration: underline;   
 }
 
-#main > div a:hover { /*texte bouton*/
-    color: white;
+.boutonMenu:hover, #main > div a:hover { /*bouton au survol*/
+    width: 250px;
+    height: 50px;
+    background-color: #81BD80;
+    color: #E1EF87;
+    text-decoration: none;
 }
 
 #main > div:nth-child(2) { /*conteneur des boutons*/
     display: flex;
-    justify-content: space-around;
-    background-color: #CFD7CF;
-    padding-top: 20px;
-    padding-bottom: 50px;
+    justify-content: space-evenly ;
+    background-color: #93d393;
+    padding-bottom: 10px;
 }
 
-#photo { /*Photo grand format*/
+#grandPhoto {
+    position: relative;
+    background-color: #E3EBE3;
+    /*border: solid 3px red;*/
+}
+
+#photo {
     width: 100%;
     filter: contrast(110%);
+    margin: 0;
+    padding: 0;
+    -webkit-filter: contrast(110%);
 }
-
 
 #GrandTexte { /*Grand texte sur la photo*/
     position: absolute;
     font-size: 110px;
     color: #E2FFE1;
-    top: 270px;
-    left: 580px;
+    top: 150px;
+    left: 80px;
 }
 
 #text1 { /*Premier paragrhaphe: description générale*/
-    position: relative;
-    top: -3px;
     font-size: 24px;
     text-justify: justify;
-    padding: 50px;
+    padding: 44px 50px 50px 50px;
     background-color: #E3EBE3;
 }
 
 #carrousel { /*Conteneur du carrousel*/
-    position: relative;
-    top: -3px;
     width: 100%;
-    height: 767px;
+    height: 700px;
     background-color: #A1ACA1;
     display: flex;
     flex-direction: row;
@@ -101,12 +135,35 @@ body {
     height: 500px;
 }
 
+.imageCar:hover {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+.contImageCar { /*Conteneur des images du carrousel*/
+    position: relative;
+}
+
+#intitul {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    top: 25px;
+    left: 50px;
+    color: rgb(71, 46, 13)
+}
+
 #leftBouton { /*Rotation du boutongauche*/
     transform: rotate(180deg);
 }
 
-.direction { /*Coloration du fond bouton de direction carrousel*/
-    background-color: #A1ACA1;
+.direction {
+    /*Colorationdufondboutondedirectioncarrousel*/background-color: #A1ACA1;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
 }
 
 #reservCont { /*Conteneur bouton réserver*/
@@ -125,21 +182,14 @@ body {
     top: -200px; 
 }
 
-#reservCar p { /*Texte du bouton réservation carrousel*/
-    font-size: 25px;
-    position: relative;
-    top: -20px;   
-}
-
 /*Aire du camping car---------------------------------------------*/
 #conteneurArticle1 { /*Conteneur article aire de camping car*/
+    
     width: 100%;
-    height: 648px;
+    height: 500px;
     background-color: #CCCCCC;
-    position: relative;
-    top: -54px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -150,29 +200,30 @@ body {
     background-color: #E1EF87;
 }
 
+#reservCc:hover {
+    background-color: white;
+} 
+
 #reservCc p { /*Texte du bouton réserver aire camping car*/ 
     font-size: 25px;
-    position: relative;
-    top: -20px;
 }
 
 #conteneurAside11, #conteneurAside12 { /*2 sous-conteneurs aire camping car*/
-    width: 50%;
+    width: 45%;
+    height: 500px;
     font-size: 24px;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items:center;
 }
 
 #conteneurAside12 p { /*Texte Notre aire de camping car*/
-    font-size: 36px;
+    font-size: 26px;
 } 
 
 #photo2 {
-    position: relative;
-    top: -33px;
     width: 600px;
     height: 420px;
 }
@@ -181,10 +232,8 @@ body {
 
 #conteneurArticle2 { /*Conteneur article hostellerie*/
     width: 100%;
-    height: 648px;
+    height: 500px;
     background-color: #CFD7CF;
-    position: relative;
-    top: -54px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -197,29 +246,30 @@ body {
     background-color: #E1EF87;
 }
 
+#reservKg:hover {
+    background-color: white;
+}
+
 #reservKg p { /*Texte du bouton réserver hostellerie*/ 
     font-size: 25px;
-    position: relative;
-    top: -20px;
 }
 
 #conteneurAside21, #conteneurAside22 { /*2 sous-conteneurs hostellerie*/
-    width: 50%;
+    width: 45%;
+    height: 500px;
     font-size: 24px;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 #conteneurAside21 p { /*Texte Notre aire de camping car*/
-    font-size: 36px;
+    font-size: 26px;
 } 
 
 #photo3 {
-    position: relative;
-    top: -33px;
     width: 600px;
     height: 420px;
 }
@@ -228,19 +278,16 @@ body {
 
 #conteneurArticle3 { /*Conteneur article A découvrir*/
     width: 100%;
-    height: 648px;
+    height: 500px;
     background-color: #CCCCCC;
-    position: relative;
-    top: -54px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 #conteneurAside31, #conteneurAside32 { /*2 sous-conteneurs A découvrir*/
-    width: 50%;
+    width: 45%;
     font-size: 24px;
-    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -248,60 +295,50 @@ body {
 }
 
 #conteneurAside32 p { /*Texte A découvrir*/
-    font-size: 36px;
+    font-size: 26px;
 } 
 
 #photo4 {
-    position: relative;
-    top: -33px;
     width: 600px;
     height: 420px;
 }
-
 
 /*Nos extérieurs---------------------------------------------*/
 
 #conteneurArticle4 { /*Conteneur article Nos extérieurs*/
     width: 100%;
-    height: 648px;
+    height: 500px;
     background-color: #CFD7CF;
-    position: relative;
-    top: -54px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 #conteneurAside41, #conteneurAside42 { /*2 sous-conteneurs Nos extérieurs*/
-    width: 50%;
+    width: 45%;
     font-size: 24px;
-    padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 #conteneurAside41 p { /*Texte Nos extérieurs*/
-    font-size: 36px;
+    font-size: 26px;
 }
 
 #photo5 {
-    position: relative;
-    top: -33px;
     width: 600px;
     height: 420px;
 }
-
 
 /*Le footer---------------------------------------------*/
 
 #contfoot { /*Conteneur footer*/
     background-color: #769976;
-    position: relative;
-    top: -54px;
     display: flex;
     justify-content: space-around;
+    padding-top: 10px;
 }
 
 li a { /*Liens mentions*/
@@ -318,8 +355,6 @@ li a:hover { /*Liens mentions*/
 }
 
 #mentions { /*Conteneur mentions*/
-    position: relative;
-    top: -10px;
     font-size: 20px;
     display: flex;
     flex-direction: column;
@@ -344,27 +379,32 @@ li a:hover { /*Liens mentions*/
 }
 
 #resosoc {
-    position: relative;
-    top: -25px;
     font-size: 16px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+}
+
+#resosoc a img:hover {
+    filter: invert(50%);
+    -webkit-filter: invert(100%);
 }
 
 #partenaire {
     display: flex;
     justify-content: center;
+    align-items: center;;
     font-size: 20px;
     background-color: #769976;
     padding-bottom: 40px;
-    padding-top: 30px;
-    position: relative;
-    top: -54px;
+    padding-top: 30px;   
 }
 
-
+#part:hover {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
 
 /*border: solid 4px yellowgreen;*/
 
