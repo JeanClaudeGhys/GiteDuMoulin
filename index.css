@@ -15,7 +15,9 @@
     padding: 0;
 }
 
-nav {
+
+
+nav { /*fixation du menu nav*/
     z-index: 1;
     position: fixed;
     width: 100%;
@@ -23,12 +25,12 @@ nav {
     left: 0;
 }
 
-#principale {
+#principale { /*compensation due au menu nav*/
     position: relative;
-    top: 241px;
+    top: 154px;
 }
 
-.toppage {
+.toppage { /*bouton top page*/
     position: fixed;
     opacity: 15%;
     bottom: 30px;
@@ -55,7 +57,6 @@ nav {
     justify-content: center;
     background-color: #93d393;
     padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 .boutonMenu { /*menu-div du lien bouton menu (corps du bouton)*/
@@ -99,8 +100,6 @@ nav {
 #photo {
     width: 100%;
     filter: contrast(110%);
-    margin: 0;
-    padding: 0;
     -webkit-filter: contrast(110%);
 }
 
@@ -131,13 +130,13 @@ nav {
 }
 
 .imageCar { /*Images formatées du carrousel*/
-    width: 900px;
+    width: 750px;
     height: 500px;
 }
 
-.imageCar:hover {
+#image_centre:hover:hover {
     filter: blur(3px);
-    -webkit-filter: blur(3px);
+    -webkit-filter: blur(6px);
 }
 
 .contImageCar { /*Conteneur des images du carrousel*/
@@ -146,11 +145,12 @@ nav {
 
 #intitul {
     position: absolute;
-    font-size: 30px;
-    font-weight: bold;
     top: 25px;
-    left: 50px;
-    color: rgb(71, 46, 13)
+    left: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #CCCCCC;
 }
 
 #leftBouton { /*Rotation du boutongauche*/
@@ -370,7 +370,7 @@ li a:hover { /*Liens mentions*/
     list-style: url("/images_logos/tel.png");
 }
 
-#coordonnees {
+#coordonnees { /*Coordonnées*/
     font-size: 16px;
     display: flex;
     flex-direction: column;
@@ -378,7 +378,7 @@ li a:hover { /*Liens mentions*/
     align-items: center;
 }
 
-#resosoc {
+#resosoc { /*Réseaux sociaux*/
     font-size: 16px;
     display: flex;
     flex-direction: column;
@@ -391,7 +391,7 @@ li a:hover { /*Liens mentions*/
     -webkit-filter: invert(100%);
 }
 
-#partenaire {
+#partenaire { /*Vignette partenaire*/
     display: flex;
     justify-content: center;
     align-items: center;;

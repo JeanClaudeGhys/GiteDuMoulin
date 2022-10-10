@@ -14,14 +14,17 @@
     </head>
 
     <body>
+        <!--Menu déroulant  gîte classque-->
+        
+
         <button class="toppage" onclick="window.location.href='#'";>
-            <img id="rightBouton" src="./images_logos/bouton.png" alt="Bouton_droit">
+            <img src="./images_logos/bouton.png" alt="top_page">
         </button>
 
         <nav>
             <div id="main">
                 <div>
-                    <img src="./images_logos/moulin_tr.png" alt="logo_moulin">
+                    <img src="./images_logos/moulin_logo.png" alt="logo_moulin">
                 </div>
                 <div>
                     <div><a class="boutonMenu" href="">Hébergements classiques</a></div>
@@ -51,24 +54,24 @@
         <section>
             <div id="carrousel">
                 <div class="contImageCar">
-                    <img class="imageCar" src="./images_logos/airecc.jpg" alt="image_gauche">
+                    <img id="image_gauche" class="imageCar" src="./images_logos/studio.png" alt="image_gauche">
                 </div>
 
-                <button class="direction">
+                <button id="gauche" class="direction">
                     <img id="leftBouton" src="./images_logos/bouton.png" alt="Bouton_gauche">
                 </button>
 
                 <div class="contImageCar">
-                    <a href=""><img class="imageCar" src="./images_logos/le_gite.jpg" alt="image_centrale"></a>
-                    <p id="intitul">Hébergement classique: Le Gîte</p>
+                    <a href="#"><img id="image_centre" class="imageCar" src="./images_logos/gite.jpg" alt="image_centrale"></a>
+                    <a id="intitul" href="#">Hébergement classique: Le Gîte</a>
                 </div>
 
-                <button class="direction">
+                <button id="droite" class="direction">
                     <img id="rightBouton" src="./images_logos/bouton.png" alt="Bouton_droit">
                 </button>
 
                 <div class="contImageCar">
-                    <img class="imageCar" src="./images_logos/kota1.jpg" alt="image_droit">
+                    <img id="image_droite" class="imageCar" src="./images_logos/kota.jpg" alt="image_droit">
                 </div>
             </div>
             <!--fin carrousel-->
@@ -216,7 +219,9 @@
                 <a href="" ><img id="part" src="./images_logos/part.jpg" alt="partenaire"></a>
             </div>   
         </footer>
-</section>        
+</section>
+    <script src="./jquery-3.6.1.js"></script>        
+    <script src="index.js"></script>        
     </body>
 
 </html>
