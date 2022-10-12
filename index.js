@@ -3,7 +3,7 @@
 //Le Gîte du Moulin : carrousel universel
 //JQuery
 
-$(function() {
+$(function() { /*Rotation des images du carrousel*/
 
     function affich(index) {
         let index1 = 0;
@@ -37,7 +37,7 @@ $(function() {
         $('#image_droite').attr('src', tab[index3][0]);         
     }
 
-    //Tableau images / textes : peut en contenir autant que vous en voulez !! 
+    //Tableau images / textes / liens : peut en contenir autant que vous en voulez !! 
     var tab = [['./images_logos/studio.png', 'Hébergements classiques: Les Studios'],
                ['./images_logos/gite.jpg', 'Hébergement classique: Le Gîte'],
                ['./images_logos/kota.jpg', 'Hébergement insolite: Le Kota'],
@@ -47,7 +47,8 @@ $(function() {
 
     var index_img = 0;
     affich(index_img);
-
+    
+    // Boutons du carrousel avec gestion des limites d'index
     $('#gauche').click(function() {
         index_img += 1;
         if(index_img > tab.length - 1) {
@@ -59,9 +60,46 @@ $(function() {
     $('#droite').click(function() {
         index_img -= 1;
         if(index_img < 0) {
-            index_img = tab.length -1;
+            index_img = tab.length - 1;
         }
         affich(index_img);
     });
+
+
+    // Gestion des sous menus hébergement
+    $('#hebclas').on('mouseenter', function() {
+        $('.menuderclass').css('visibility', 'visible');
+    });
+
+    $('#hebclas').on('mouseleave', function() {
+        $('.menuderclass').css('visibility', 'hidden');
+    });
+
+    $('.menuderclass').on('mouseenter', function() {
+        $(this).css('visibility', 'visible');
+    });
+    
+    $('.menuderclass').on('mouseleave', function() {
+        $(this).css('visibility', 'hidden');
+    });
+
+
+    $('#hebinsol').on('mouseenter', function() {
+        $('.menuderinsol').css('visibility', 'visible');
+    });
+
+    $('#hebinsol').on('mouseleave', function() {
+        $('.menuderinsol').css('visibility', 'hidden');
+    });
+
+    $('.menuderinsol').on('mouseenter', function() {
+        $(this).css('visibility', 'visible');
+    });
+    
+    $('.menuderinsol').on('mouseleave', function() {
+        $(this).css('visibility', 'hidden');
+    });
+
+    
    
 }); //DOM prêt
