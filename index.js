@@ -33,17 +33,20 @@ $(function() { /*Rotation des images du carrousel*/
     
         $('#image_centre').attr('src', tab[index2][0]);
         $('#intitul').text(tab[index2][1]);
+        $('.contImageCar a').attr('href', tab[index2][2]);
     
         $('#image_droite').attr('src', tab[index3][0]);         
     }
 
     //Tableau images / textes / liens : peut en contenir autant que vous en voulez !! 
-    var tab = [['./images_logos/studio.png', 'Hébergements classiques: Les Studios'],
-               ['./images_logos/gite.jpg', 'Hébergement classique: Le Gîte'],
-               ['./images_logos/kota.jpg', 'Hébergement insolite: Le Kota'],
-               ['./images_logos/roulotte.png', 'Hébergement insolite: La Roulotte'] 
-              ]
-
+    var tab = [['./images_logos/studio.png', 'Hébergements classiques: Les Studios',
+                './studios.html'],
+               ['./images_logos/gite.jpg', 'Hébergement classique: Le Gîte',
+               './legite.html'],
+               ['./images_logos/kota.jpg', 'Hébergement insolite: Le Kota',
+               './kota.html'],
+               ['./images_logos/roulotte.png', 'Hébergement insolite: La Roulotte',
+               './roulotte.html']]
 
     var index_img = 0;
     affich(index_img);
